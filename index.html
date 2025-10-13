@@ -11,6 +11,58 @@
     <link rel="icon" href="favicon.ico">
 
     <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h4 {
+            margin: 10px 0 5px 0;
+        }
+
+        .card p {
+            margin: 0 10px 10px 10px;
+        }
+
+        .card .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .card .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,24 +95,26 @@
         <section class="projects-preview">
             <h3>Последние проекты</h3>
             <div class="projects-grid">
-                <a class="card" href="pages/projects.html">
+                <div class="card">
                     <img src="images/project1.jpg" alt="Проект 1">
                     <h4>Сайт-визитка</h4>
                     <p>Мой первый сайт.</p>
-                </a>
-                <a class="btn" href="https://sksk-a.github.io/front/index.html">Открыть сайт</a>
-                <a class="card" href="pages/projects.html">
-                    <img src="images/project2.jpg" alt="Проект 1">
+                    <a class="btn" href="https://sksk-a.github.io/front/index.html" target="_blank">Открыть сайт</a>
+                </div>
+
+                <div class="card">
+                    <img src="images/project2.jpg" alt="Проект 2">
                     <h4>Мой первый сайт</h4>
                     <p>Это мой первый проект, который я сделал при изучении HTML.</p>
-                    <a class="btn" href="https://sksk-a.github.io/apofapffdpfd/index.html">Открыть сайт</a>
-                </a>
-                <a class="card" href="pages/projects.html">
-                    <img src="images/project3.jpg" alt="Проект 1">
+                    <a class="btn" href="https://sksk-a.github.io/apofapffdpfd/index.html" target="_blank">Открыть сайт</a>
+                </div>
+
+                <div class="card">
+                    <img src="images/project3.jpg" alt="Проект 3">
                     <h4>Проект 3</h4>
                     <p>Описание проекта 3</p>
-                </a>
-                <a class="btn" href="pages/projects">Заглушка</a>
+                    <a class="btn" href="pages/projects.html" target="_blank">Заглушка</a>
+                </div>
             </div>
         </section>
     </main>
@@ -68,5 +122,12 @@
     <footer class="site-footer">
         Не защищено никем, 2025. <a href="pages/contacts.html">Контакты</a>
     </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/filters.js"></script>
+  <script src="scripts/form-validation.js"></script>
+    
 </body>
 </html>
+
