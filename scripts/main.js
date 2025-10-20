@@ -1,4 +1,11 @@
-smooth scroll
+// === skills bars ===
+document.querySelectorAll('.skill .bar > div').forEach(bar => {
+  const val = bar.getAttribute('data-value');
+  bar.style.width = val + '%';
+  bar.textContent = val + '%';
+});
+
+// === smooth scroll & mobile nav ===
 document.addEventListener('DOMContentLoaded', function(){
   const btn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
@@ -9,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -19,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function(){
         if(target){
           target.scrollIntoView({behavior: 'smooth', block: 'start'});
         }
-        
         if(nav && nav.classList.contains('mobile-open')) nav.classList.remove('mobile-open');
       }
     });
